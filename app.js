@@ -5,6 +5,13 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
+app.get("/home", (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "something",
+  });
+});
+
 app.listen(3000, () => {
-  console.log(`server started on port 3000 http://localhost:3000`)
+  console.log(`server started on port 3000 http://localhost:3000`);
 });
